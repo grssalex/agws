@@ -1,0 +1,61 @@
+---
+import '../assets/css/header.css';
+---
+
+<header class="site-header">
+  <div class="site-header__container">
+    <div class="site-header__logo">
+      <a href="/" class="site-header__logo-link">
+        <img src="/img/agws_logo.png" alt="AGWS Logo" class="site-header__logo-image" />
+      </a>
+    </div>
+    
+    <nav class="site-header__nav">
+      <ul class="site-header__nav-list">
+        <li class="site-header__nav-item"><a href="/" class="site-header__nav-link">Accueil</a></li>
+        <li class="site-header__nav-item site-header__nav-item--has-submenu">
+          <a href="/services" class="site-header__nav-link">Services 
+            <svg class="submenu-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </a>
+          <ul class="site-header__submenu">
+            <li class="site-header__submenu-item"><a href="/services/developpement-web" class="site-header__submenu-link">Développement Web</a></li>
+            <li class="site-header__submenu-item"><a href="/services/e-commerce" class="site-header__submenu-link">E-commerce</a></li>
+            <li class="site-header__submenu-item"><a href="/services/referencement-seo" class="site-header__submenu-link">Référencement SEO</a></li>
+            <li class="site-header__submenu-item"><a href="/services/image-numerique" class="site-header__submenu-link">Image numérique</a></li>
+          </ul>
+        </li>
+        <li class="site-header__nav-item"><a href="/about" class="site-header__nav-link">À propos</a></li>
+        <li class="site-header__nav-item"><a href="/contact" class="site-header__nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <div class="site-header__right">
+      <button class="theme-toggle theme-toggle-desktop" aria-label="Toggle theme">
+        <svg class="theme-toggle-icon sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="theme-toggle-icon moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      
+      <div class="site-header__menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <div class="site-overlay"></div>
+</header>
+<script src="../scripts/header-menu.js"></script>

@@ -1,0 +1,646 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --text-color-light: #666666;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --button-bg: #388E3C;
+  --button-hover: #2E7D32;
+  --hero-overlay: rgba(0, 0, 0, 0, 1);
+  --hero-text-shadow: rgba(0, 0, 0, 0.3);
+  --section-bg: #f5f5f7;
+}
+
+[data-theme="dark"] {
+  --bg-color: #000000;
+  --text-color: #f5f5f7;
+  --text-color-light: #a1a1a6;
+  --card-bg: #111111;
+  --card-shadow: rgba(255, 255, 255, 0.1);
+  --button-bg: #2997ff;
+  --button-hover: #0077ed;
+  --hero-overlay: rgba(0, 0, 0, 0.7);
+  --hero-text-shadow: rgba(0, 0, 0, 0.5);
+  --section-bg: #000000;
+}
+
+/*-------------------------------------------
+  HOME PAGE GENERAL STYLES
+-------------------------------------------*/
+.home-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+}
+
+/*-------------------------------------------
+  GLOBAL LAYOUT CLASSES
+-------------------------------------------*/
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+.container-full {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+}
+
+.section {
+  padding: 4rem 0;
+  background-color: var(--section-bg);
+  transition: background-color 0.3s ease;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-description {
+  text-align: center;
+  color: var(--text-color-light);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/*-------------------------------------------
+  HERO SECTION STYLES
+-------------------------------------------*/
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.hero-banner-image {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.light-mode {
+  display: block;
+}
+
+[data-theme="dark"] .light-mode {
+  display: none;
+}
+
+[data-theme="dark"] .dark-mode {
+  display: block;
+}
+
+.hero-content,
+.hero-title,
+.hero-description {
+  display: none;
+}
+
+/*-------------------------------------------
+  BUTTON STYLES
+-------------------------------------------*/
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--button-bg);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+
+/*-------------------------------------------
+  SERVICES SECTION STYLES
+-------------------------------------------*/
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px var(--card-shadow);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.card-text {
+  color: var(--text-color-light);
+  line-height: 1.6;
+}
+
+/*-------------------------------------------
+  E-COMMERCE PLATFORMS STYLES
+-------------------------------------------*/
+.ecommerce-platforms {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.platform-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.platform-tag .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.platform-tag .name {
+  color: var(--text-color);
+}
+
+.platform-tag.shopify {
+  background-color: rgba(29, 185, 84, 0.1);
+}
+
+.platform-tag.shopify .dot {
+  background-color: #1db954;
+}
+
+.platform-tag.woocommerce {
+  background-color: rgba(96, 56, 139, 0.1);
+}
+
+.platform-tag.woocommerce .dot {
+  background-color: #60388b;
+}
+
+.platform-tag.prestashop {
+  background-color: rgba(0, 126, 229, 0.1);
+}
+
+.platform-tag.prestashop .dot {
+  background-color: #007ee5;
+}
+
+.platform-tag.cms {
+  background-color: rgba(255, 107, 0, 0.1);
+}
+
+.platform-tag.cms .dot {
+  background-color: #ff6b00;
+}
+
+/* Dark mode styles for platform tags */
+[data-theme="dark"] .platform-tag.shopify {
+  background-color: rgba(29, 185, 84, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.woocommerce {
+  background-color: rgba(96, 56, 139, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.prestashop {
+  background-color: rgba(0, 126, 229, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.cms {
+  background-color: rgba(255, 107, 0, 0.2);
+}
+
+[data-theme="dark"] .platform-tag .name {
+  color: #ffffff;
+}
+
+/* Development badges styles */
+.platform-tag.responsive {
+  background-color: rgba(64, 196, 255, 0.1);
+}
+
+.platform-tag.responsive .dot {
+  background-color: #40c4ff;
+}
+
+.platform-tag.performance {
+  background-color: rgba(255, 64, 129, 0.1);
+}
+
+.platform-tag.performance .dot {
+  background-color: #ff4081;
+}
+
+.platform-tag.modern {
+  background-color: rgba(171, 71, 188, 0.1);
+}
+
+.platform-tag.modern .dot {
+  background-color: #ab47bc;
+}
+
+/* Dark mode styles for development badges */
+[data-theme="dark"] .platform-tag.responsive {
+  background-color: rgba(64, 196, 255, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.performance {
+  background-color: rgba(255, 64, 129, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.modern {
+  background-color: rgba(171, 71, 188, 0.2);
+}
+
+/* SEO badges styles */
+.platform-tag.google-seo {
+  background-color: rgba(66, 133, 244, 0.1);
+}
+
+.platform-tag.google-seo .dot {
+  background-color: #4285f4;
+}
+
+.platform-tag.optimization {
+  background-color: rgba(15, 157, 88, 0.1);
+}
+
+.platform-tag.optimization .dot {
+  background-color: #0f9d58;
+}
+
+.platform-tag.visibility {
+  background-color: rgba(244, 180, 0, 0.1);
+}
+
+.platform-tag.visibility .dot {
+  background-color: #f4b400;
+}
+
+/* Dark mode styles for SEO badges */
+[data-theme="dark"] .platform-tag.google-seo {
+  background-color: rgba(66, 133, 244, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.optimization {
+  background-color: rgba(15, 157, 88, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.visibility {
+  background-color: rgba(244, 180, 0, 0.2);
+}
+
+/* Ads badges styles */
+.platform-tag.google-ads {
+  background-color: rgba(66, 133, 244, 0.1);
+}
+
+.platform-tag.google-ads .dot {
+  background-color: #4285f4;
+}
+
+.platform-tag.facebook-ads {
+  background-color: rgba(24, 119, 242, 0.1);
+}
+
+.platform-tag.facebook-ads .dot {
+  background-color: #1877f2;
+}
+
+.platform-tag.instagram-ads {
+  background-color: rgba(225, 48, 108, 0.1);
+}
+
+.platform-tag.instagram-ads .dot {
+  background-color: #e1306c;
+}
+
+.platform-tag.tiktok-ads {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.platform-tag.tiktok-ads .dot {
+  background-color: #000000;
+}
+
+/* Dark mode styles for ads badges */
+[data-theme="dark"] .platform-tag.google-ads {
+  background-color: rgba(66, 133, 244, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.facebook-ads {
+  background-color: rgba(24, 119, 242, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.instagram-ads {
+  background-color: rgba(225, 48, 108, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.tiktok-ads {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="dark"] .platform-tag.tiktok-ads .dot {
+  background-color: #ffffff;
+}
+
+/* Branding badges styles */
+.platform-tag.branding {
+  background-color: rgba(103, 58, 183, 0.1);
+}
+
+.platform-tag.branding .dot {
+  background-color: #673ab7;
+}
+
+.platform-tag.brand-update {
+  background-color: rgba(233, 30, 99, 0.1);
+}
+
+.platform-tag.brand-update .dot {
+  background-color: #e91e63;
+}
+
+.platform-tag.visual-identity {
+  background-color: rgba(0, 150, 136, 0.1);
+}
+
+.platform-tag.visual-identity .dot {
+  background-color: #009688;
+}
+
+.platform-tag.graphic-charter {
+  background-color: rgba(255, 152, 0, 0.1);
+}
+
+.platform-tag.graphic-charter .dot {
+  background-color: #ff9800;
+}
+
+/* Dark mode styles for branding badges */
+[data-theme="dark"] .platform-tag.branding {
+  background-color: rgba(103, 58, 183, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.brand-update {
+  background-color: rgba(233, 30, 99, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.visual-identity {
+  background-color: rgba(0, 150, 136, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.graphic-charter {
+  background-color: rgba(255, 152, 0, 0.2);
+}
+
+/* Domain and Email badges styles */
+.platform-tag.domain {
+  background-color: rgba(3, 169, 244, 0.1);
+}
+
+.platform-tag.domain .dot {
+  background-color: #03a9f4;
+}
+
+.platform-tag.hosting {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.platform-tag.hosting .dot {
+  background-color: #4caf50;
+}
+
+.platform-tag.email {
+  background-color: rgba(255, 87, 34, 0.1);
+}
+
+.platform-tag.email .dot {
+  background-color: #ff5722;
+}
+
+.platform-tag.dns {
+  background-color: rgba(121, 85, 72, 0.1);
+}
+
+.platform-tag.dns .dot {
+  background-color: #795548;
+}
+
+/* Dark mode styles for domain and email badges */
+[data-theme="dark"] .platform-tag.domain {
+  background-color: rgba(3, 169, 244, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.hosting {
+  background-color: rgba(76, 175, 80, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.email {
+  background-color: rgba(255, 87, 34, 0.2);
+}
+
+[data-theme="dark"] .platform-tag.dns {
+  background-color: rgba(121, 85, 72, 0.2);
+}
+
+/*-------------------------------------------
+  DESCRIPTION SECTION STYLES
+-------------------------------------------*/
+.description-section {
+  text-align: center;
+  padding: 4rem 0;
+  background-color: var(--section-bg);
+}
+
+.description-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.description-title {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.description-text {
+  color: var(--text-color-light);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.description-highlight {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/*-------------------------------------------
+  RESPONSIVE ADJUSTMENTS
+-------------------------------------------*/
+@media (max-width: 768px) {
+  .section {
+    padding: 2.5rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-section {
+    min-height: 30vh;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+  }
+  
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .btn-large {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .card {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .ecommerce-platforms {
+    gap: 0.4rem;
+    justify-content: center;
+  }
+
+  .platform-tag {
+    padding: 0.3rem 0.4rem;
+    font-size: 0.8rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .platform-tag .dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .platform-tag .name {
+    text-align: center;
+  }
+
+  .card-text {
+    text-align: center;
+  }
+
+  .section-description {
+    padding: 0 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+  
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-content {
+    max-width: 900px;
+  }
+  
+  .container {
+    max-width: 1300px;
+  }
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url('/fonts/neuemachina/NeueMachina-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url('/fonts/neuemachina/NeueMachina-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueMachina';
+  src: url('/fonts/neuemachina/NeueMachina-Ultrabold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: 'NeueMachina', sans-serif;
+}

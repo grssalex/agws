@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import '../assets/css/home.css';
+import '../assets/css/services-carousel.css';
+import '../assets/css/footer.css';
+
+const title = "AGWS";
+const description = "page d'accueil de notre site web";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section hero-section--with-bg">
+      <div class="hero-banner">
+        <img src="/img/light.png" alt="Light Mode Banner" class="hero-banner-image light-mode" />
+        <img src="/img/dark.png" alt="Dark Mode Banner" class="hero-banner-image dark-mode" />
+      </div>
+    </section>
+    
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Les services de notre agence :</h2>
+        <p class="section-description">
+          Nous vous accompagnons dans votre transformation digitale avec des solutions web sur-mesure. Création de sites internet, optimisation digitale et stratégie en ligne
+        </p>
+        <div class="card-grid">
+          <div class="card">
+            <h3 class="card-title">Développement Web</h3>
+            <p class="card-text">
+              Création de sites web modernes, rapides et optimisés pour tous les appareils.
+            </p>
+            <div class="ecommerce-platforms">
+              <div class="platform-tag responsive">
+                <span class="dot"></span>
+                <span class="name">Responsive</span>
+              </div>
+              <div class="platform-tag performance">
+                <span class="dot"></span>
+                <span class="name">Performance</span>
+              </div>
+              <div class="platform-tag modern">
+                <span class="dot"></span>
+                <span class="name">Modern UI</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card-title">E - commerce</h3>
+            <p class="card-text">
+              Création de boutiques en ligne performantes pour vendre vos produits et services.
+            </p>
+            <div class="ecommerce-platforms">
+              <div class="platform-tag shopify">
+                <span class="dot"></span>
+                <span class="name">Shopify</span>
+              </div>
+              <div class="platform-tag woocommerce">
+                <span class="dot"></span>
+                <span class="name">WooCommerce</span>
+              </div>
+              <div class="platform-tag prestashop">
+                <span class="dot"></span>
+                <span class="name">PrestaShop</span>
+              </div>
+              <div class="platform-tag cms">
+                <span class="dot"></span>
+                <span class="name">CMS personnalisé</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Référencement SEO</h3>
+            <p class="card-text">
+              Optimisation de votre présence en ligne pour améliorer votre visibilité dans les moteurs de recherche.
+            </p>
+            <div class="ecommerce-platforms">
+              <div class="platform-tag google-seo">
+                <span class="dot"></span>
+                <span class="name">Google SEO</span>
+              </div>
+              <div class="platform-tag optimization">
+                <span class="dot"></span>
+                <span class="name">Optimisation Référencement</span>
+              </div>
+              <div class="platform-tag visibility">
+                <span class="dot"></span>
+                <span class="name">Augmenter la visibilité globale</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Création d'image numérique</h3>
+            <p class="card-text">
+              Création de logos, chartes graphiques et identités visuelles pour votre entreprise.
+            </p>
+            <div class="ecommerce-platforms">
+              <div class="platform-tag branding">
+                <span class="dot"></span>
+                <span class="name">Branding</span>
+              </div>
+              <div class="platform-tag brand-update">
+                <span class="dot"></span>
+                <span class="name">Mise à jour de branding</span>
+              </div>
+              <div class="platform-tag visual-identity">
+                <span class="dot"></span>
+                <span class="name">Identité visuelle</span>
+              </div>
+              <div class="platform-tag graphic-charter">
+                <span class="dot"></span>
+                <span class="name">Charte graphique</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Publicité ADS & Réseaux Sociaux</h3>
+            <p class="card-text">
+              Gestion et optimisation de vos campagnes publicitaires sur Google Ads, Facebook Ads et mise en avant de votre marque sur les réseaux sociaux.
+            </p>
+            <div class="ecommerce-platforms">
+              <div class="platform-tag google-ads">
+                <span class="dot"></span>
+                <span class="name">Google Ads</span>
+              </div>
+              <div class="platform-tag facebook-ads">
+                <span class="dot"></span>
+                <span class="name">Facebook Ads</span>
+              </div>
+              <div class="platform-tag instagram-ads">
+                <span class="dot"></span>
+                <span class="name">Instagram Ads</span>
+              </div>
+              <div class="platform-tag tiktok-ads">
+                <span class="dot"></span>
+                <span class="name">TikTok Ads</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Gestion de domaine & Mail professionnel</h3>
+            <p class="card-text">
+              Configuration et gestion de noms de domaine, hébergement web et messagerie professionnelle personnalisée.
+            </p>
+            <div class="ecommerce-platforms">
+              <div class="platform-tag domain">
+                <span class="dot"></span>
+                <span class="name">Nom de domaine</span>
+              </div>
+              <div class="platform-tag hosting">
+                <span class="dot"></span>
+                <span class="name">Hébergement web</span>
+              </div>
+              <div class="platform-tag email">
+                <span class="dot"></span>
+                <span class="name">Email professionnel</span>
+              </div>
+              <div class="platform-tag dns">
+                <span class="dot"></span>
+                <span class="name">Configuration DNS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <script src="../scripts/services-carousel.js"></script>
+  <Footer />
+</Layout>
+
+

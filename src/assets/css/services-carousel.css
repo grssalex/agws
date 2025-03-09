@@ -1,0 +1,121 @@
+:root {
+  --carousel-dot-active-color: #388E3C;
+  --carousel-nav-bg: #f1f1f1;
+  --carousel-nav-hover-bg: #388E3C;
+  --carousel-nav-hover-color: white;
+}
+
+[data-theme="dark"] {
+  --carousel-dot-active-color: #2997ff;
+  --carousel-nav-bg: #1d1d1f;
+  --carousel-nav-hover-bg: #2997ff;
+  --carousel-nav-hover-color: white;
+}
+
+/*-------------------------------------------
+  CAROUSEL MODE GENERAL STYLES
+-------------------------------------------*/
+.carousel-mode {
+  display: block !important;
+  position: relative;
+}
+
+.carousel-mode .card {
+  display: none;
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.carousel-mode .card.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/*-------------------------------------------
+  CAROUSEL NAVIGATION DOTS
+-------------------------------------------*/
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+  background-color: var(--carousel-dot-active-color);
+}
+
+/*-------------------------------------------
+  CAROUSEL NAVIGATION BUTTONS
+-------------------------------------------*/
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carousel-prev,
+.carousel-next {
+  background-color: var(--carousel-nav-bg);
+  border: none;
+  color: #333;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+  background-color: var(--carousel-nav-hover-bg);
+  color: var(--carousel-nav-hover-color);
+}
+
+/*-------------------------------------------
+  ANIMATIONS
+-------------------------------------------*/
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/*-------------------------------------------
+  RESPONSIVE ADJUSTMENTS
+-------------------------------------------*/
+@media (min-width: 769px) {
+  .carousel-dots, .carousel-nav {
+    display: none;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .card {
+    padding: 2.5rem;
+  }
+}
