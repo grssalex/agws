@@ -7,7 +7,7 @@ const { title = "AGWS", description = "AGWS website" } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
@@ -17,14 +17,7 @@ const { title = "AGWS", description = "AGWS website" } = Astro.props;
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <meta name="description" content={description} />
-        <meta name="color-scheme" content="light dark">
         <title>{title}</title>
-        <script is:inline>
-          const savedTheme = localStorage.getItem('theme');
-          const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
-          document.documentElement.setAttribute('data-theme', theme);
-        </script>
     </head>
     <body>
         <slot />
@@ -33,20 +26,24 @@ const { title = "AGWS", description = "AGWS website" } = Astro.props;
 
 <style is:global>
     :root {
-        background-color: var(--bg-color);
-        color: var(--text-color);
+        --bg-color: #f1f1f1;
+        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    [data-theme="dark"] {
+        --bg-color: #1D1D1F;
     }
     
     html,
     body {
         margin: 0;
+        padding: 0;
         width: 100%;
-        height: 100%;
-        font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
+        min-height: 100vh;
         background-color: var(--bg-color);
-        transition: all 0.3s ease;
+        transition: background-color 0.3s ease;
     }
     
     body.menu-open {

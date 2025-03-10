@@ -1,7 +1,14 @@
 :root {
-  --footer-bg: var(--card-bg);
-  --footer-text: var(--text-color);
-  --footer-text-light: var(--text-color-light);
+  --footer-bg: #f1f1f1;
+  --footer-text: #4a4a4a;
+  --footer-text-light: #666666;
+  --footer-border: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --footer-bg: #1D1D1F;
+  --footer-text: #f5f5f7;
+  --footer-text-light: #a1a1a6;
   --footer-border: rgba(255, 255, 255, 0.1);
 }
 
@@ -36,6 +43,22 @@
   width: 120px;
   height: auto;
   margin-bottom: 1.5rem;
+}
+
+.footer-logo.light-mode {
+  display: block;
+}
+
+.footer-logo.dark-mode {
+  display: none;
+}
+
+[data-theme="dark"] .footer-logo.light-mode {
+  display: none;
+}
+
+[data-theme="dark"] .footer-logo.dark-mode {
+  display: block;
 }
 
 .footer-tagline {
