@@ -80,11 +80,18 @@
 .hero-section {
   position: relative;
   overflow: hidden;
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
 }
 
 .hero-banner {
   position: relative;
   width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   height: auto;
 }
 
@@ -92,6 +99,8 @@
   display: none;
   width: 100%;
   height: auto;
+  max-height: 55vh;
+  object-fit: contain;
 }
 
 .light-mode {
