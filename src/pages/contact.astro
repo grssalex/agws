@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import '../assets/css/contact.css';
+
+const title = "Contact - AGWS";
+const description = "Contactez-nous pour vos projets web et digitaux";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <main class="contact-page">
+    <section class="contact-hero">
+      <div class="container">
+        <h1 class="contact-title">Prendre contact avec l'agence</h1>
+        <p class="contact-subtitle">Discutons de votre projet</p>
+      </div>
+    </section>
+
+    <section class="contact-content">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Formulaire de contact -->
+          <div class="contact-form-wrapper">
+            <form class="contact-form" action="https://formspree.io/f/mldjelab" method="POST">
+              <div class="form-group">
+                <label for="name">Nom complet</label>
+                <input type="text" id="name" name="name" required placeholder="Votre nom">
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="votre@email.com">
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" name="phone" placeholder="06 XX XX XX XX" 
+                  pattern="^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$"
+                  title="Entrez un numéro de téléphone français valide">
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Sujet</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Sélectionnez un sujet</option>
+                  <option value="developpement-web">Développement Web</option>
+                  <option value="e-commerce">E-commerce</option>
+                  <option value="seo">Référencement SEO</option>
+                  <option value="design">Image numérique</option>
+                  <option value="domaine">Gestion de nom de domaine</option>
+                  <option value="email">Emails professionnels</option>
+                  <option value="maintenance">Maintenance web</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Décrivez votre projet..."></textarea>
+              </div>
+
+              <button type="submit" class="submit-button">
+                Envoyer le message
+              </button>
+            </form>
+          </div>
+
+          <!-- Informations de contact -->
+          <div class="contact-info">
+            <div class="info-card">
+              <h3>Nos coordonnées</h3>
+              <div class="info-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <div class="info-text">
+                  <span class="info-name">Alexandre Grosse</span>
+                  <span class="info-role">Dirigeant</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <a href="tel:+33625023130">+33 6 25 02 31 30</a>
+              </div>
+              <div class="info-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <a href="mailto:contact@agws.fr">contact@agws.fr</a>
+              </div>
+              <div class="info-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Paris, France</span>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="https://github.com/grssalex/agws" target="_blank" class="social-link" aria-label="GitHub">
+                <img src="/img/git_logo.png" alt="GitHub" class="social-icon" />
+              </a>
+              <a href="https://www.linkedin.com/in/grssalex/" target="_blank" class="social-link" aria-label="LinkedIn">
+                <img src="/img/link.png" alt="LinkedIn" class="social-icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="faq-title">Questions fréquentes</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quel est le délai moyen de réponse ?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Nous nous engageons à répondre à toutes les demandes sous 24h ouvrées. Pour les projets urgents, nous privilégions un premier contact téléphonique.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Comment se déroule un projet web ?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Notre processus se déroule en plusieurs étapes : analyse des besoins, proposition commerciale, conception, développement, tests et mise en ligne. Chaque étape est validée avec vous.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Proposez-vous un accompagnement après la mise en ligne ?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Oui, nous proposons différentes formules de maintenance et d'accompagnement pour assurer le suivi et l'évolution de votre projet.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Quels types de projets réalisez-vous ?</span>
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer">
+              <p>Nous développons des sites vitrines, e-commerce, applications web, et proposons des services de refonte, d'optimisation SEO et de création d'identité visuelle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  import '../scripts/contact-form.js';
+  import '../scripts/faq-accordion.js';
+</script> 

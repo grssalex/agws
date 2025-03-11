@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.4.2"
+    "@emailjs/browser": "^4.4.1",
+    "astro": "^5.4.2",
+    "nodemailer": "^6.10.0"
   }
 }

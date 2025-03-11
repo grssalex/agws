@@ -643,3 +643,93 @@
 body {
   font-family: 'NeueMachina', sans-serif;
 }
+
+.platform-tag.domain-management {
+  background-color: #E3F2FD;
+  color: #1976D2;
+}
+
+.platform-tag.domain-management .dot {
+  background-color: #1976D2;
+}
+
+.platform-tag.hosting-service {
+  background-color: #F3E5F5;
+  color: #7B1FA2;
+}
+
+.platform-tag.hosting-service .dot {
+  background-color: #7B1FA2;
+}
+
+.platform-tag.dns-config {
+  background-color: #E8F5E9;
+  color: #388E3C;
+}
+
+.platform-tag.dns-config .dot {
+  background-color: #388E3C;
+}
+
+.platform-tag.email-pro {
+  background-color: #FFF3E0;
+  color: #F57C00;
+}
+
+.platform-tag.email-pro .dot {
+  background-color: #F57C00;
+}
+
+.platform-tag.support-service {
+  background-color: #E8EAF6;
+  color: #3F51B5;
+}
+
+.platform-tag.support-service .dot {
+  background-color: #3F51B5;
+}
+
+[data-theme="dark"] .platform-tag.domain-management {
+  background-color: rgba(25, 118, 210, 0.2);
+  color: #90CAF9;
+}
+
+[data-theme="dark"] .platform-tag.domain-management .dot {
+  background-color: #90CAF9;
+}
+
+[data-theme="dark"] .platform-tag.hosting-service {
+  background-color: rgba(123, 31, 162, 0.2);
+  color: #E1BEE7;
+}
+
+[data-theme="dark"] .platform-tag.hosting-service .dot {
+  background-color: #E1BEE7;
+}
+
+[data-theme="dark"] .platform-tag.dns-config {
+  background-color: rgba(56, 142, 60, 0.2);
+  color: #A5D6A7;
+}
+
+[data-theme="dark"] .platform-tag.dns-config .dot {
+  background-color: #A5D6A7;
+}
+
+[data-theme="dark"] .platform-tag.email-pro {
+  background-color: rgba(245, 124, 0, 0.2);
+  color: #FFE0B2;
+}
+
+[data-theme="dark"] .platform-tag.email-pro .dot {
+  background-color: #FFE0B2;
+}
+
+[data-theme="dark"] .platform-tag.support-service {
+  background-color: rgba(63, 81, 181, 0.2);
+  color: #C5CAE9;
+}
+
+[data-theme="dark"] .platform-tag.support-service .dot {
+  background-color: #C5CAE9;
+}
