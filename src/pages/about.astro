@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import '../assets/css/about.css';
+
+const title = "A propos - AGWS";
+const description = "Découvrez l'histoire et la vision d'Alexandre Grosse Web Services (AGWS)";
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <section class="about-page">
+    <div class="container">
+      <h1>Alexandre Grosse Web Services (AGWS)</h1>
+      <p>Créé par Alexandre Grosse, étudiant à la prestigieuse école Epitech – reconnue pour la rigueur et la réputation d'excellence qui forgent des professionnels compétents dans le numérique – AGWS incarne la fusion d'une passion pour l'informatique et d'une solide expérience en relation client.</p>
+      
+      <h2>L'origine d'AGWS</h2>
+      <p>Issu de la couronne parisienne, j'ai commencé mon parcours en apportant bénévolement mon aide à de nombreuses PME. Cette expérience enrichissante m'a permis de comprendre les enjeux réels des entreprises avant de lancer officiellement mon entreprise en février 2023.</p>
+      
+      <h2>Notre mission</h2>
+      <p>AGWS s'engage à répondre aux problématiques numériques des entreprises en créant des sites web, des boutiques e-commerce et bien d'autres solutions digitales sur mesure, afin de les aider à se démarquer.</p>
+      
+      <h2>Notre vision</h2>
+      <p>Je souhaite offrir aux entreprises la liberté numérique qu'elles méritent, en mettant à leur disposition un accompagnement personnalisé et humain, capable de comprendre et de répondre aux attentes professionnelles spécifiques de chaque organisation.</p>
+    </div>
+  </section>
+  <Footer />
+</Layout>
