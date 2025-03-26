@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'NeueMachina';
+    src: url('/fonts/neuemachina/NeueMachina-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMachina';
+    src: url('/fonts/neuemachina/NeueMachina-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMachina';
+    src: url('/fonts/neuemachina/NeueMachina-Ultrabold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    --text-color: #333333;
+    --text-color-light: #666666;
+    --color-primary: #388E3C;
+    --color-primary-dark: #2E7D32;
+}
+
+[data-theme="dark"] {
+    --text-color: #f5f5f7;
+    --text-color-light: #a1a1a6;
+    --color-primary: #2997ff;
+    --color-primary-dark: #0077ed;
+}
+
+.image-num-hero {
+    padding: 4rem 2rem;
+    background: var(--gradient-light);
+    text-align: center;
+    font-family: 'NeueMachina', sans-serif;
+}
+
+.image-num-hero h1 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-family: 'NeueMachina', sans-serif;
+    font-weight: bold;
+}
+
+.image-num-description {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-family: 'NeueMachina', sans-serif;
+    font-weight: normal;
+}
+
+.image-num-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+}
+
+[data-theme="dark"] .image-num-hero {
+    background: var(--gradient-dark);
+}
+
+[data-theme="dark"] .image-num-hero h1 {
+    color: var(--color-primary);
+}
+
+[data-theme="dark"] .image-num-description {
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .image-num-hero {
+        padding: 3rem 1rem;
+    }
+
+    .image-num-hero h1 {
+        font-size: 2rem;
+    }
+
+    .image-num-description {
+        font-size: 1rem;
+    }
+} 

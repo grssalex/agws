@@ -22,6 +22,16 @@
   font-style: normal;
 }
 
+:root {
+  --accent-green: #388E3C;
+  --accent-blue: #2997ff;
+}
+
+[data-theme="dark"] {
+  --accent-green: #388E3C;
+  --accent-blue: #2997ff;
+}
+
 /*-------------------------------------------
   ABOUT PAGE STYLES
 -------------------------------------------*/
@@ -31,6 +41,10 @@
   color: var(--text-color);
   min-height: calc(100vh - 200px);
   font-family: 'NeueMachina', sans-serif;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .about-page .container {
@@ -210,5 +224,15 @@
   .expertise-item,
   .about-cta {
     padding: 1.5rem;
+  }
+}
+
+.highlight-text {
+  color: var(--accent-green);
+}
+
+@media (prefers-color-scheme: dark) {
+  .highlight-text {
+    color: var(--accent-blue);
   }
 }

@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../assets/css/services/image-numerique.css';
+import Header from '../../components/header.astro';
+import Footer from '../../components/footer.astro';
+
+const title = "Image Numérique - AGWS";
+const description = "Services d'image numérique et création graphique - AGWS";
+---
+
+<Layout title={title} description={description}>
+    <Header />
+    <main>
+        <section class="image-num-hero">
+            <h1>Image Numérique</h1>
+            <div class="image-num-description">
+                <p>
+                    Donnez vie à votre identité visuelle avec nos services de création graphique professionnelle. 
+                    Nous concevons des visuels impactants qui renforcent votre image de marque et captent 
+                    l'attention de votre audience.
+                </p>
+                <p>
+                    De la création de logo à la conception de supports marketing, en passant par la retouche photo 
+                    et l'illustration, nous mettons notre créativité au service de votre communication visuelle.
+                </p>
+                <p>
+                    Notre approche combine expertise technique et sensibilité artistique pour créer des visuels 
+                    qui vous démarquent et racontent votre histoire de manière unique et mémorable.
+                </p>
+            </div>
+        </section>
+        <!-- Espace réservé pour les cards qui seront ajoutées ultérieurement -->
+    </main>
+    <Footer />
+</Layout> 

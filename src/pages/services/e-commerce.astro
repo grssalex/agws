@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../assets/css/services/e-commerce.css';
+import Header from '../../components/header.astro';
+import Footer from '../../components/footer.astro';
+
+const title = "E-commerce - AGWS";
+const description = "Solutions e-commerce sur mesure - AGWS";
+---
+
+<Layout title={title} description={description}>
+    <Header />
+    <main>
+        <section class="e-commerce-hero">
+            <h1>Solutions E-commerce</h1>
+            <div class="e-commerce-description">
+                <p>
+                    Transformez votre activité avec une boutique en ligne performante et professionnelle. 
+                    Nous créons des solutions e-commerce sur mesure qui s'adaptent parfaitement à vos besoins 
+                    et à votre marché.
+                </p>
+                <p>
+                    De la petite boutique artisanale aux grands catalogues de produits, nous vous accompagnons 
+                    dans la mise en place d'une expérience d'achat fluide et sécurisée pour vos clients.
+                </p>
+                <p>
+                    Notre expertise couvre les principales plateformes e-commerce (WooCommerce, Shopify, PrestaShop) 
+                    et garantit une intégration parfaite avec vos outils de gestion existants.
+                </p>
+            </div>
+        </section>
+        <!-- Espace réservé pour les cards qui seront ajoutées ultérieurement -->
+    </main>
+    <Footer />
+</Layout> 
