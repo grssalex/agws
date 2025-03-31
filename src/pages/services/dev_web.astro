@@ -4,33 +4,307 @@ import '../../assets/css/services/dev_web.css';
 import Header from '../../components/header.astro';
 import Footer from '../../components/footer.astro';
 
-const title = "Developpement web - AGWS";
-const description = "Developpement web - AGWS";
+const title = "Sites Vitrines | Développement Web - AGWS";
+const description = "Créez votre présence en ligne avec un site vitrine professionnel et moderne. Tarifs à partir de 650€.";
 ---
 
-<Layout title="Développement Web | AGWS">
+<Layout title={title} description={description}>
     <Header />
     <main>
         <section class="dev-web-hero">
-            <h1>Développement Web Professionnel</h1>
+            <h1>Sites Vitrines <span class="highlight-text">Professionnels</span></h1>
             <div class="dev-web-description">
                 <p>
-                    Donnez vie à votre présence en ligne avec des solutions web sur mesure. Nous créons des sites web professionnels 
-                    qui reflètent parfaitement l'identité de votre entreprise et s'adaptent à tous les écrans.
+                    Donnez vie à votre présence en ligne avec une vitrine digitale sur mesure qui reflète parfaitement l'identité de votre entreprise.
                 </p>
                 <p>
-                    Que vous soyez une petite entreprise, un artisan, un commerce ou une grande société, notre expertise 
-                    s'adapte à toutes les activités. Nous concevons des sites vitrines élégants et performants qui 
-                    mettent en valeur vos services et captent l'attention de vos visiteurs.
+                    Nos <strong>sites vitrines élégants et performants</strong> captent l'attention de vos visiteurs et s'adaptent à tous les écrans.
                 </p>
-                <p>
-                    Chaque site que nous développons est entièrement responsive, garantissant une expérience utilisateur 
-                    optimale sur tous les appareils - des smartphones aux grands écrans d'ordinateur. Notre approche 
-                    combine design moderne, performances techniques et facilité d'utilisation pour créer votre vitrine 
-                    digitale idéale.
-                </p>
+            </div>
+        </section>
+        
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">Pourquoi choisir un site vitrine ?</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Solution économique</h3>
+                        <p>Le site vitrine représente la solution idéale pour se lancer sur internet avec un budget maîtrisé.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Simple et efficace</h3>
+                        <p>Présentez votre activité, vos services et vos coordonnées sans complexité inutile.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>Multi-plateformes</h3>
+                        <p>Tous nos sites s'adaptent parfaitement à tous les appareils : ordinateurs, tablettes et smartphones.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Optimisé pour le SEO</h3>
+                        <p>Développé avec les meilleures pratiques pour un bon référencement dans les moteurs de recherche.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-section">
+            <div class="container">
+                <h2 class="section-title">Nos offres de sites vitrines</h2>
+                <p class="section-description">Des solutions adaptées à tous les budgets à partir de 650€</p>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Essentiel</h3>
+                            <div class="price">
+                                <span class="amount">À partir de</span>
+                                <span class="value">650€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="features">
+                            <ul>
+                                <li>Site 1 à 5 pages</li>
+                                <li>Design responsive (adapté mobile)</li>
+                                <li>Formulaire de contact</li>
+                                <li>Intégration de vos réseaux sociaux</li>
+                                <li>Compatibilité tous navigateurs</li>
+                                <li>Optimisation SEO de base</li>
+                                <li>Mise en ligne incluse</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <a href="/contact" class="cta-button">Demander un devis</a>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card featured">
+                        <div class="card-header">
+                            <h3>Professionnel</h3>
+                            <div class="price">
+                                <span class="amount">À partir de</span>
+                                <span class="value">950€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="features">
+                            <ul>
+                                <li>Site jusqu'à 10 pages</li>
+                                <li>Design premium personnalisé</li>
+                                <li>Formulaire de contact avancé</li>
+                                <li>Intégration Google Maps</li>
+                                <li>Galerie d'images dynamique</li>
+                                <li>Optimisation SEO complète</li>
+                                <li>Intégration Google Analytics</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <a href="/contact" class="cta-button">Demander un devis</a>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <div class="card-header">
+                            <h3>Premium</h3>
+                            <div class="price">
+                                <span class="amount">À partir de</span>
+                                <span class="value">1450€</span>
+                            </div>
+                        </div>
+                        
+                        <div class="features">
+                            <ul>
+                                <li>Site multi-pages illimité</li>
+                                <li>Design exclusif sur mesure</li>
+                                <li>Animations et interactions avancées</li>
+                                <li>Blog intégré et gestion de contenu</li>
+                                <li>Optimisation SEO premium</li>
+                                <li>Compatible multilingue</li>
+                                <li>Système de réservation/prise de RDV</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-footer">
+                            <a href="/contact" class="cta-button">Demander un devis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="portfolio-section">
+            <div class="container">
+                <h2 class="section-title">Nos réalisations de sites vitrines</h2>
+                <p class="section-description">Voici un exemple de site vitrine réalisé pour nos clients</p>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="/img/clients/ir2.png" alt="Logo IR2" />
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h3>IR2</h3>
+                                    <p>Site vitrine pour cabinet d'études et évaluation</p>
+                                    <a href="https://ir2.fr" target="_blank" class="portfolio-link">Visiter le site</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="advantages-section">
+            <div class="container">
+                <h2 class="section-title">Pourquoi investir dans un site vitrine ?</h2>
+                
+                <div class="advantages-grid">
+                    <div class="advantages-content">
+                        <div class="advantage-item">
+                            <div class="advantage-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <div class="advantage-text">
+                                <h3>Crédibilité professionnelle</h3>
+                                <p>Un site web professionnel renforce la confiance des clients potentiels et établit votre légitimité sur le marché.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-item">
+                            <div class="advantage-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                            </div>
+                            <div class="advantage-text">
+                                <h3>Visibilité 24/7</h3>
+                                <p>Votre site vitrine représente votre entreprise en permanence, permettant aux clients de vous découvrir à tout moment.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="advantage-item">
+                            <div class="advantage-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                </svg>
+                            </div>
+                            <div class="advantage-text">
+                                <h3>Évolutivité</h3>
+                                <p>Commencez avec un site vitrine simple, puis évoluez vers plus de fonctionnalités selon la croissance de votre entreprise.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="advantages-image">
+                        <img src="https://via.placeholder.com/600x800?text=Avantages+Site+Vitrine" alt="Avantages d'un site vitrine" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title">Questions fréquentes</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Combien de temps faut-il pour créer un site vitrine ?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Le délai de création varie généralement entre 2 et 4 semaines selon la complexité du projet. Une formule Essentielle peut être livrée en 2 semaines, tandis qu'une formule Premium nécessitera environ 4 semaines pour un développement complet.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Est-ce que je pourrai mettre à jour mon site moi-même ?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oui, tous nos sites vitrines sont développés avec des systèmes de gestion de contenu intuitifs qui vous permettent de modifier votre contenu facilement. Nous fournissons également une formation pour vous familiariser avec l'interface d'administration.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Les tarifs incluent-ils l'hébergement et le nom de domaine ?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>L'hébergement et le nom de domaine sont proposés en option. Nous pouvons gérer ces aspects pour vous avec un forfait annuel à partir de 80€, ou vous pouvez utiliser vos propres services si vous en disposez déjà.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Comment garantissez-vous un bon référencement pour mon site ?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Tous nos sites sont développés selon les meilleures pratiques SEO : code propre et optimisé, structure sémantique, temps de chargement rapide, responsive design et méta-données optimisées. Les formules Professionnelle et Premium incluent également une optimisation avancée du contenu et un suivi des performances.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Prêt à lancer votre site vitrine ?</h2>
+                    <p>Discutons de votre projet et créons ensemble la présence en ligne idéale pour votre activité.</p>
+                    <a href="/contact" class="cta-button-large">Obtenir un devis gratuit</a>
+                </div>
             </div>
         </section>
     </main>
     <Footer />
 </Layout>
+
+<script>
+  import '../../scripts/theme-toggle.js';
+  import '../../scripts/faq-accordion.js';
+</script>
+
+<style>
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+</style>

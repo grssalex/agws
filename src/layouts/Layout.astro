@@ -24,6 +24,46 @@ const { title = "AGWS", description = "AGWS website" } = Astro.props;
     </body>
 </html>
 
+<script is:inline>
+  // Exécuter immédiatement
+  (function() {
+    // Vérifier le thème enregistré ou utiliser la préférence système
+    const savedTheme = localStorage.getItem('theme');
+    const systemDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Définir le thème initial
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (systemDarkMode) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+    
+    // Fonction pour basculer le thème - sera utilisée par le addEventListener au chargement
+    window.toggleTheme = function() {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      
+      console.log('Thème changé de', currentTheme, 'à', newTheme);
+    };
+    
+    // Ajouter les écouteurs d'événements après le chargement complet de la page
+    window.addEventListener('load', function() {
+      const themeToggles = document.querySelectorAll('.theme-toggle, .theme-toggle-desktop, .theme-toggle-mobile, .theme-toggle-footer');
+      
+      themeToggles.forEach(button => {
+        button.addEventListener('click', window.toggleTheme);
+      });
+      
+      console.log('Écouteurs d\'événements ajoutés aux boutons de thème:', themeToggles.length);
+    });
+  })();
+</script>
+
 <style is:global>
     :root {
         --bg-color: #f1f1f1;

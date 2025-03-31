@@ -212,7 +212,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #f1f1f1;
+  background-color: var(--bg-color);
 }
 
 .hero-banner-image {
@@ -242,7 +242,7 @@ body {
 }
 
 [data-theme="dark"] .hero-banner.fullwidth .hero-banner-image {
-  background-color: #1c1c1e;
+  background-color: var(--bg-color);
 }
 
 /*-------------------------------------------
